@@ -1,0 +1,65 @@
+/*
+    Previously, when LJKit raised an exception, this file was searched for a
+    localized error message based on the exception's name.  The message was
+    used as the "reason" associated with the exception.  Starting with 
+    LJKit 0.9.6, this file is no longer used, and the Localizable.strings file
+    of the application's main bundle is consulted instead.  This file is
+    retained as a template for you to use when amending your application's
+    Localizable.strings file.
+ */
+
+LJNotLoggedInError = 
+"You are not logged in.  Log in before trying again.";
+
+LJNoSuccessKeyError =
+"Could not complete operation.  The server did not report whether the operation succeeded or not.  This usually means there is a problem with the server.\n\nPlease wait and try again later.";
+
+LJNoErrMsgKeyError =
+"Could not complete operation.  The server reported that an error occurred but did not provide a message explaining why.\n\nPlease wait and try again later.";
+
+LJAccountDelegateDidVetoConnection =
+"The application aborted the connection to the server.";
+
+LJGroupLimitReached =
+"You cannot create a new group because you already have 30, which is the maximum number of groups allowed by the server.  You will have to delete an existing group before you can make a new one.";
+
+/*
+    The numbers following LJStreamError refer to an error domain and error code, 
+    respectively, as defined in the CFNetwork documentation.  (See "CFNetwork Constants")
+    file:///Developer/Documentation/Networking/Conceptual/CFNetwork/Chapter_3/chapter_3_section_94.html
+    
+    LJKit will first look for a key with the appropriate numbers.  For example, if the 
+    error domain is 1 and the error code is 27, LJKit will attempt to load a string for
+    the key "LJStreamError_1_27".  If no such key exists, it will load the string for
+    the key "LJStreamError_%d_%d" and perform printf-style substitution on the string
+    itself.
+    
+    The same goes for the LJHTTPStatus_%d error messages below.
+ */
+
+"LJStreamError_1_50" =
+"The network is down.  Make sure your computer is connected to the Internet and try again.";
+
+"LJStreamError_1_51" =
+"Could not contact the server.  Make sure your computer is connected to the Internet and try again.";
+
+"LJStreamError_1_54" =
+"Could not complete operation because the connection was reset by the server.  This usually occurs when the network is busy.\n\nPlease wait and try again later.";
+
+"LJStreamError_1_65" =
+"Could not contact the server.  Make sure your computer is connected to the Internet and try again.";
+
+"LJStreamError_%d_%d" =
+"An error occurred while communicating with the server.  Your computer may not be connected to the Internet or the network could be busy. (Error Domain %d, Code %d)\n\nPlease wait and try again later.";
+
+LJHTTPParseError =
+"Unable to understand the server's reply.  The server could be sending garbage (a problem on the server side) or there may be a bug in this application.  If you see this error message frequently, please contact the developer.";
+
+"LJHTTPStatusError_404" =
+"Contacted the server but the LiveJournal service does not appear to be running.  There may be a problem with the server.\n\nMake sure you have the correct server URL and try again later.";
+
+"LJHTTPStatusError_500" =
+"Contacted the server but the LiveJournal service is not configured properly.  There may be a problem with the server.\n\nMake sure you have the correct server URL and try again later.";
+
+"LJHTTPStatusError_%d" =
+"The server responded with HTTP error code %d.  There may be a problem with the server.\n\nMake sure you have the correct server URL and try again later.";
