@@ -439,6 +439,7 @@
 		5FBE9E10092E685C0071F534 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../Xjournal/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
@@ -473,6 +474,7 @@
 		5FBE9E11092E685C0071F534 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../Xjournal/build/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = YES;
@@ -503,6 +505,7 @@
 		5FBE9E12092E685C0071F534 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../Xjournal/build/$(CONFIGURATION)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -587,13 +590,11 @@
 		5FBE9E18092E685C0071F534 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_VERSION_i386 = 4.0;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_VERSION_ppc = 3.3;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				SDKROOT = macosx;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
 				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -602,13 +603,11 @@
 		5FBE9E19092E685C0071F534 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_VERSION_i386 = 4.0;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_VERSION_ppc = 3.3;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				SDKROOT = macosx;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
 				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -617,14 +616,12 @@
 		5FBE9E1A092E685C0071F534 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_VERSION_i386 = 4.0;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_VERSION_ppc = 3.3;
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				OBJROOT = ../Build/Intermediate;
 				SDKROOT = macosx;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
 				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
 				SYMROOT = ../Build/Products;
 				VERSIONING_SYSTEM = "apple-generic";
