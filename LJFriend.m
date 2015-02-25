@@ -325,7 +325,7 @@
     return _fgColorForYou;
 }
 
-- (unsigned)hash
+- (NSUInteger)hash
 {
     return [[self username] hash];
 }

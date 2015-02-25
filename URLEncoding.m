@@ -38,7 +38,7 @@ void LJAppendURLEncodingOfStringToData(NSString *string, NSMutableData *data)
 
     hex[0] = '%';
     bytes = [string UTF8String];
-    for ( i = 0; c = bytes[i]; i++ ) {
+    for ( i = 0; (c = bytes[i]); i++ ) {
         if (c == ' ') {
             [data appendBytes:"+" length:1];
         } else if (((c >= 'a') && (c <= 'z')) ||
@@ -73,7 +73,7 @@ NSString *LJURLDecodeString(NSString *string)
     decodedBytes = (char *)[decodedData mutableBytes];
     encodedBytes = [string UTF8String];
     di = 0;
-    for ( si = 0; c = encodedBytes[si]; si++ ) {
+    for ( si = 0; (c = encodedBytes[si]); si++ ) {
         if (c == '+') {
             decodedBytes[di++] = ' ';
         } else if (c == '%') {

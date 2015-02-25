@@ -266,7 +266,7 @@ void LJServerReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConn
     if (_requestTemplate == NULL) [self updateRequestTemplate];
     request = CFHTTPMessageCreateCopy(kCFAllocatorDefault, _requestTemplate);
     CFHTTPMessageSetBody(request, (CFDataRef)contentData);
-    tmpString = [NSString stringWithFormat:@"%u", [contentData length]];
+    tmpString = [NSString stringWithFormat:@"%lu", (unsigned long)[contentData length]];
     CFHTTPMessageSetHeaderFieldValue(request, CFSTR("Content-Length"), (CFStringRef)tmpString);
     
 	// Connect to the server.
@@ -278,7 +278,7 @@ void LJServerReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConn
 	
 	// Build an HTTP response from the data read.
 	response = CFHTTPMessageCreateEmpty(kCFAllocatorDefault, FALSE);
-	while (bytesRead = CFReadStreamRead(stream, bytes, STREAM_BUFFER_SIZE)) {
+	while ((bytesRead = CFReadStreamRead(stream, bytes, STREAM_BUFFER_SIZE))) {
 		if (bytesRead == -1) {
 			CFStreamError err = CFReadStreamGetError(stream);
 			[[_account _exceptionWithFormat:@"LJStreamError_%d_%d", err.domain, err.error] raise];

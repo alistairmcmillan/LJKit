@@ -287,7 +287,7 @@ static NSString *entrySummaryLength = nil;
     return workingCounts;
 }
 
-- (unsigned)hash
+- (NSUInteger)hash
 {
     return [_name hash];
 }

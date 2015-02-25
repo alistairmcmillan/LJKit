@@ -242,7 +242,7 @@
     return nonMembers;
 }
 
-- (unsigned)hash
+- (NSUInteger)hash
 {
     return _number;
 }
