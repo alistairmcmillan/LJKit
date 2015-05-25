@@ -138,14 +138,14 @@
 			return i;
         }
     }
-    return nil;
+    return -1;
 }
 
 - (NSString *)MoodNameFromID:(NSString *)moodID
 {
 	NSString *moodName = nil;
 	int index = [self _indexForMoodID: moodID];
-	if (index != nil) {
+	if (index != -1) {
 		moodName = [_moodNames objectAtIndex: index];
 	}
 	return moodName;
