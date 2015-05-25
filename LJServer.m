@@ -193,7 +193,7 @@ void LJServerReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConn
 {
     if (_target == NULL) {
         _reachContext.info = self;
-        _target = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, [[[self url] host] UTF8String]);
+        _target = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, [[[self URL] host] UTF8String]);
         SCNetworkReachabilitySetCallback(_target, LJServerReachabilityCallback, &_reachContext);
         SCNetworkReachabilityScheduleWithRunLoop(_target, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
     }
